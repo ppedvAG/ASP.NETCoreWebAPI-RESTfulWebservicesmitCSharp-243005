@@ -19,6 +19,21 @@ namespace VehicleManagement.Services
             return await _context.Vehicles.ToListAsync();
         }
 
+        public async Task<IEnumerable<Auto>> GetVehiclesByType(string value)
+        {
+            return await _context.Vehicles.Where(v => v.Type == value).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Auto>> GetVehiclesByFuelType(string value)
+        {
+            return await _context.Vehicles.Where(v => v.Fuel == value).ToListAsync();
+        }
+
+        public async Task<IEnumerable<Auto>> GetVehiclesByManufacturer(string value)
+        {
+            return await _context.Vehicles.Where(v => v.Manufacturer == value).ToListAsync();
+        }
+
         public async Task<Auto?> GetVehicleById(long id)
         {
             return await _context.Vehicles.FindAsync(id);

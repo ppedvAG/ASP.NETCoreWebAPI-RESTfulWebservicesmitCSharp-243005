@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using VehicleApi.Models;
 using VehicleManagement.Contracts;
 using VehicleManagement.Models;
 
@@ -17,8 +18,23 @@ namespace VehicleApi.Controllers
 
         // GET: api/Vehicles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Auto>>> GetVehicles()
+        public async Task<ActionResult<IEnumerable<Auto>>> GetVehicles([FromQuery] SearchParams? search)
         {
+            if (!string.IsNullOrEmpty(search?.Manufacturer))
+            {
+                return Ok(await _vehicleService.GetVehiclesByManufacturer(search.Manufacturer));
+            }
+
+            if (!string.IsNullOrEmpty(search?.Type))
+            {
+                return Ok(await _vehicleService.GetVehiclesByType(search.Type));
+            }
+
+            if (!string.IsNullOrEmpty(search?.Fuel))
+            {
+                return Ok(await _vehicleService.GetVehiclesByFuelType(search.Fuel));
+            }
+
             var result = await _vehicleService.GetVehicles();
             return Ok(result);
         }

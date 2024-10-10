@@ -15,6 +15,21 @@ Accept: text/csv
 
 ###
 
+GET {{VehicleApi_HostAddress}}/api/vehicles?manufacturer=Ferrari
+Accept: text/csv
+
+###
+
+GET {{VehicleApi_HostAddress}}/api/vehicles?fuel=Diesel
+Accept: text/csv
+
+###
+
+GET {{VehicleApi_HostAddress}}/api/vehicles?type=Convertible
+Accept: text/csv
+
+###
+
 POST {{VehicleApi_HostAddress}}/api/vehicles
 Content-Type: application/json
 Accept: application/json
