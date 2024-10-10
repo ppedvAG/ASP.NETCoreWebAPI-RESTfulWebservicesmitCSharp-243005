@@ -5,6 +5,16 @@ Accept: application/json
 
 ###
 
+GET {{VehicleApi_HostAddress}}/api/vehicles
+Accept: application/xml
+
+###
+
+GET {{VehicleApi_HostAddress}}/api/vehicles
+Accept: text/csv
+
+###
+
 POST {{VehicleApi_HostAddress}}/api/vehicles
 Content-Type: application/json
 Accept: application/json

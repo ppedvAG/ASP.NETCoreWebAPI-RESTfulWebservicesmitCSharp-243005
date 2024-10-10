@@ -1,7 +1,9 @@
 
+using System.Text.Json.Serialization;
 using VehicleManagement.Contracts;
 using VehicleManagement.Data;
 using VehicleManagement.Services;
+using WebApiContrib.Core.Formatter.Csv;
 
 namespace VehicleApi
 {
@@ -13,7 +15,15 @@ namespace VehicleApi
 
             // Add services to the container.
 
-            builder.Services.AddControllers();
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                })
+                .AddXmlSerializerFormatters()
+                .AddCsvSerializerFormatters();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
