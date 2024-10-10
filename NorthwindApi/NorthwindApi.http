@@ -1,0 +1,33 @@
+@NorthwindApi_HostAddress = http://localhost:5035
+
+GET {{NorthwindApi_HostAddress}}/api/customers/
+Accept: application/json
+
+###
+
+GET {{NorthwindApi_HostAddress}}/api/customers/ACME
+Accept: application/json
+
+###
+
+POST {{NorthwindApi_HostAddress}}/api/customers/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "CustomerId": "ACME",
+  "CompanyName": "ACME Corporation",
+  "ContactName": "John Doe",
+  "ContactTitle": "Sales Representative",
+  "Address": "Obere Str. 57",
+  "City": "New York",
+  "Region": null,
+  "postalCode": "1000"
+}
+
+###
+
+GET {{NorthwindApi_HostAddress}}/api/orders/
+Accept: application/json
+
+###

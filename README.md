@@ -9,8 +9,8 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 
 ## Modul 002 Konfiguration
 
-	-	[ ] IOC mittels Dependency Injection
-	-	[ ] Logging in ASP.Net Core
+	-	[x] IOC mittels Dependency Injection
+	-	[x] Logging in ASP.Net Core
 
 ## Modul 003 Controllers
 
@@ -40,10 +40,10 @@ dotnet ef migrations add myInitialScript --project myProject
 dotnet ef database update --project myProject
 ```
 
-	-	[ ] Db First: Northwind Datenbank
-	-   [ ] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
-	-	[ ] VS Extension [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
-	-	[ ] Controller erzeugen
+	-	[x] Db First: Northwind Datenbank
+	-   [x] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
+	-	[x] VS Extension [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
+	-	[x] Controller erzeugen
 	-	[ ] LAB: Daten von Northwind abfragen
 			* Alle Bestellungen
 			* Alle Bestellungen innerhalb eines Zeitraumes (Parameter: StartDate, EndDate)
