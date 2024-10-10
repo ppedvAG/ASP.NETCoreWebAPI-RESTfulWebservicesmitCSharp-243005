@@ -1,0 +1,39 @@
+@VehicleApi_HostAddress = http://localhost:5180
+
+GET {{VehicleApi_HostAddress}}/api/vehicles
+Accept: application/json
+
+###
+
+POST {{VehicleApi_HostAddress}}/api/vehicles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "manufacturer": "ppedv",
+  "model": "0815",
+  "fuel": "Electric",
+  "type": "Convertible",
+  "color": 42
+}
+
+###
+
+PUT {{VehicleApi_HostAddress}}/api/vehicles/101
+Content-Type: application/json
+Accept: application/json
+
+{
+  "manufacturer": "ppedv",
+  "model": "Paul Panzer IV",
+  "fuel": "Electric",
+  "type": "Convertible",
+  "color": 42
+}
+
+###
+
+GET {{VehicleApi_HostAddress}}/api/vehicles/101
+Accept: application/json
+
+###
