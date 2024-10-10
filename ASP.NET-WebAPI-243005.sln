@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastApi", "Weath
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M001", "M001", "{1AF80118-2C77-4534-AE1B-EE5AE050B0F4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M002-IoC", "M002-IoC", "{54886D82-B7C9-43E4-A03C-AAC4D752123A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCSample", "IoCSample\IoCSample.csproj", "{E6045162-E416-42D4-85BF-DE1DCC13DF61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{38139961-5EE9-4C86-8577-2860F10C0DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38139961-5EE9-4C86-8577-2860F10C0DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38139961-5EE9-4C86-8577-2860F10C0DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6045162-E416-42D4-85BF-DE1DCC13DF61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6045162-E416-42D4-85BF-DE1DCC13DF61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6045162-E416-42D4-85BF-DE1DCC13DF61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6045162-E416-42D4-85BF-DE1DCC13DF61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{AEDB33BC-8FD8-4690-9F8D-8EC591312E0F} = {1AF80118-2C77-4534-AE1B-EE5AE050B0F4}
 		{38139961-5EE9-4C86-8577-2860F10C0DFF} = {1AF80118-2C77-4534-AE1B-EE5AE050B0F4}
+		{E6045162-E416-42D4-85BF-DE1DCC13DF61} = {54886D82-B7C9-43E4-A03C-AAC4D752123A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1D8110C-FCAA-48EC-BCED-54E2ACA4827B}

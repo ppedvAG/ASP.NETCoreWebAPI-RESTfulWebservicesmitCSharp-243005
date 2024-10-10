@@ -1,19 +1,22 @@
 # ASP.NETCoreWebAPI-RESTfulWebservicesmitCSharp-242046
-KursRepository zu Kurs ASP.NET Core Web API 	-	[ ] RESTful Webservices mit C# der ppedv AG
+KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppedv AG
 
 ## Modul 001 Einführung WebAPI
 
-	-	[ ] WheaterForecastAPI erstellt
-	-	[ ] Projektstruktur erklärt
-	-	[ ] [httpFiles](https://learn.microsoft.com/en-us/aspnet/core/test/http-files)
+	-	[x] WheaterForecastAPI erstellt
+	-	[x] Projektstruktur erklärt
+	-	[x] [httpFiles](https://learn.microsoft.com/en-us/aspnet/core/test/http-files)
 
-## Modul 003 Dependency Injection
+## Modul 002 Konfiguration
+
+	-	[ ] IOC mittels Dependency Injection
+	-	[ ] Logging in ASP.Net Core
+
+## Modul 003 Controllers
 
 	-	[ ] BusinessLogic Class Library Project erstellt
 	-	[ ] Vehicle Demo Klassen
 	-	[ ] Interface als Contract extrahiert
-	-	[ ] In Program.cs mittels DI registriert
-	-	[ ] GET Methode für den Controller geschrieben um Liste von zufälligen Fahrzeugen zu erhalten
 
 ## Modul 004 Routing
 
@@ -38,7 +41,8 @@ dotnet ef database update --project myProject
 ```
 
 	-	[ ] Db First: Northwind Datenbank
-	-	[ ] EF Core Power Tools "Reverse Engineering"
+	-   [ ] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
+	-	[ ] VS Extension [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
 	-	[ ] Controller erzeugen
 	-	[ ] LAB: Daten von Northwind abfragen
 			* Alle Bestellungen
