@@ -22,14 +22,14 @@ namespace NorthwindODataApi.Controllers
         [HttpGet, EnableQuery]
         public async Task<IActionResult> Get()
         {
-            return Ok(await _context.Customers.ToListAsync());
+            return Ok(await _context.Customers.Include(x => x.Orders).ToListAsync());
         }
 
         [HttpGet, EnableQuery]
         [Route("{key}")]
         public async Task<IActionResult> Get(string key)
         {
-            return Ok(await _context.Customers.SingleOrDefaultAsync(x => x.CustomerId == key));
+            return Ok(await _context.Customers.Include(x => x.Orders).SingleOrDefaultAsync(x => x.CustomerId == key));
         }
     }
 }

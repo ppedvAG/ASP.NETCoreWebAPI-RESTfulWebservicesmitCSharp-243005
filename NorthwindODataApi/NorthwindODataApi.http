@@ -18,7 +18,24 @@ Accept: application/json
 
 ###
 
+// Kunden pro Land anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/customers?$apply=groupby((Country),+aggregate(CustomerID+with+countdistinct+as+CustomerCount))&$orderby=CustomerCount+desc
+Accept: application/json
+
+###
+
 GET {{NorthwindODataApi_HostAddress}}/odata/orders?$skip=10&$top=10
 Accept: application/json
 
 ###
+
+// Orders zwischen einem Start- und End-Datum anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/orders?$filter=OrderDate+ge+1997-10-01T00:00:00Z+and+OrderDate+le+1997-10-31T23:59:59Z
+Accept: application/json
+
+###
+
+// Bestellungen pro Kunde anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/customers?$expand=Orders($select=OrderID)&$select=CustomerID,+CompanyName&$orderby=Orders/$count+desc
+Accept: application/json
+

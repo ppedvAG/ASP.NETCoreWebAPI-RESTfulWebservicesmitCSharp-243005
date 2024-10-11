@@ -13,6 +13,9 @@ namespace NorthwindODataApi
             modelBuilder.EntitySet<Customer>("Customers");
             modelBuilder.EntitySet<Employee>("Employee");
             modelBuilder.EntitySet<Order>("Orders");
+
+            modelBuilder.EntityType<Customer>().HasMany(c => c.Orders);
+            modelBuilder.EntityType<Employee>().HasMany(c => c.Orders);
             modelBuilder.EntityType<Order>().HasRequired(o => o.Customer);
             modelBuilder.EntityType<Order>().HasRequired(o => o.Employee);
 
