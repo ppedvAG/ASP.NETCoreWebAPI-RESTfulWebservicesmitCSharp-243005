@@ -1,0 +1,24 @@
+@NorthwindODataApi_HostAddress = http://localhost:5087
+
+// Zweite Seite der Customers mit einer Seitenlänge von 10 anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/customers?$skip=10&$top=10
+Accept: application/json
+
+###
+
+// Alle Kunden aus Kanada anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/customers?$filter=Country+eq+'Canada'
+Accept: application/json
+
+###
+
+// Alle Kunden aus Kanada anzeigen
+GET {{NorthwindODataApi_HostAddress}}/odata/customers/ALFKI
+Accept: application/json
+
+###
+
+GET {{NorthwindODataApi_HostAddress}}/odata/orders?$skip=10&$top=10
+Accept: application/json
+
+###

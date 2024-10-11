@@ -14,24 +14,24 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 
 ## Modul 003 Controllers
 
-	-	[ ] BusinessLogic Class Library Project erstellt
-	-	[ ] Vehicle Demo Klassen
-	-	[ ] Interface als Contract extrahiert
+	-	[x] BusinessLogic Class Library Project erstellt
+	-	[x] Vehicle Demo Klassen
+	-	[x] Interface als Contract extrahiert
 
 ## Modul 004 Routing
 
 	-	[ ] Movie Database Api
-	-	[ ] Controller mit CRUD Operationen
-	-	[ ] Model constraints
+	-	[x] Controller mit CRUD Operationen
+	-	[x] Model constraints
 	-	[ ] LAB: Movie DB erstellen
 
 ## Modul 005 EF Core
 
-	-	[ ] Code First: VehicleFleet Datenbank
-	-	[ ] Datenklasse mit Attriuten versetzt
-	-	[ ] DbContext erzeugt
-	-	[ ] Connection string erstellt
-	-	[ ] Abhängigkeiten via DI registriert
+	-	[x] Code First: VehicleFleet Datenbank
+	-	[x] Datenklasse mit Attriuten versetzt
+	-	[x] DbContext erzeugt
+	-	[x] Connection string erstellt
+	-	[x] Abhängigkeiten via DI registriert
 	-	[ ] LAB: DB für Movie DB erstellen
 
 ```
@@ -52,7 +52,8 @@ dotnet ef database update --project myProject
 
 ## Modul 006 Media Types
 
-	-	[ ] ActionResults als XML zurück geben 
+	-	[x] ActionResults als XML zurück geben 
+	-	[x] ActionResults als CSV zurück geben 
 
 ## Modul 007 HttpClient
 
@@ -65,3 +66,8 @@ dotnet ef database update --project myProject
 	-	[ ] IdentityDbContext verwenden
 	-	[ ] JwtToken erstellen
 	-	[ ] Authentication mit Microsoft Identity Platform via Azure AD
+
+	
+## Modul 009 OData
+
+	-	[x] OData Abfragen auf Northwind

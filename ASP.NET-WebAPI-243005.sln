@@ -5,23 +5,27 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecastMinimalApi", "WeatherForecastMinimalApi\WeatherForecastMinimalApi.csproj", "{AEDB33BC-8FD8-4690-9F8D-8EC591312E0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastApi", "WeatherForecastApi\WeatherForecastApi.csproj", "{38139961-5EE9-4C86-8577-2860F10C0DFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecastApi", "WeatherForecastApi\WeatherForecastApi.csproj", "{38139961-5EE9-4C86-8577-2860F10C0DFF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M001", "M001", "{1AF80118-2C77-4534-AE1B-EE5AE050B0F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M002-IoC", "M002-IoC", "{54886D82-B7C9-43E4-A03C-AAC4D752123A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoCSample", "IoCSample\IoCSample.csproj", "{E6045162-E416-42D4-85BF-DE1DCC13DF61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IoCSample", "IoCSample\IoCSample.csproj", "{E6045162-E416-42D4-85BF-DE1DCC13DF61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M005-EFCore", "M005-EFCore", "{B10530EF-922E-48DC-9018-E64E2340D9C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindApi", "NorthwindApi\NorthwindApi.csproj", "{9310407F-30AB-4146-93BE-6909B0224DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindApi", "NorthwindApi\NorthwindApi.csproj", "{9310407F-30AB-4146-93BE-6909B0224DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleManagement", "VehicleManagement\VehicleManagement.csproj", "{949021C8-0900-4955-BA61-315DB8FB637D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleManagement", "VehicleManagement\VehicleManagement.csproj", "{949021C8-0900-4955-BA61-315DB8FB637D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleApi", "VehicleApi\VehicleApi.csproj", "{057EA59F-4F39-40A9-AF11-92F6EC6102AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleApi", "VehicleApi\VehicleApi.csproj", "{057EA59F-4F39-40A9-AF11-92F6EC6102AC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{378A9DBF-449F-4E51-B661-68E753710232}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M009-OData", "M009-OData", "{D57C860F-306A-4F02-A3B0-E38B0045AA00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindODataApi", "NorthwindODataApi\NorthwindODataApi.csproj", "{C53F8C5B-F6F7-4120-A157-5781459303DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,10 @@ Global
 		{057EA59F-4F39-40A9-AF11-92F6EC6102AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{057EA59F-4F39-40A9-AF11-92F6EC6102AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{057EA59F-4F39-40A9-AF11-92F6EC6102AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C53F8C5B-F6F7-4120-A157-5781459303DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C53F8C5B-F6F7-4120-A157-5781459303DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C53F8C5B-F6F7-4120-A157-5781459303DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C53F8C5B-F6F7-4120-A157-5781459303DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,7 @@ Global
 		{9310407F-30AB-4146-93BE-6909B0224DDF} = {B10530EF-922E-48DC-9018-E64E2340D9C1}
 		{949021C8-0900-4955-BA61-315DB8FB637D} = {378A9DBF-449F-4E51-B661-68E753710232}
 		{057EA59F-4F39-40A9-AF11-92F6EC6102AC} = {378A9DBF-449F-4E51-B661-68E753710232}
+		{C53F8C5B-F6F7-4120-A157-5781459303DB} = {D57C860F-306A-4F02-A3B0-E38B0045AA00}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1D8110C-FCAA-48EC-BCED-54E2ACA4827B}
