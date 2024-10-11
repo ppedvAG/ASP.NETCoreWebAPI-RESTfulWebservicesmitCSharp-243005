@@ -20,7 +20,6 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 
 ## Modul 004 Routing, MediaTypes, Async/Await
 
-	-	[ ] Movie Database Api
 	-	[x] Controller mit CRUD Operationen
 
 	-	[x] Route constraints
@@ -32,7 +31,7 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 	-	[x] ActionResults als CSV zurück geben 
 
 	-	[x] Async/Await Pattern
-	-	[ ] LAB: Movie DB erstellen
+	-	[x] LAB: Movie Store Api
 
 ## Modul 005 EF Core
 
@@ -43,7 +42,7 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 	-	[x] Abhängigkeiten via DI registriert
 	-	[x] Best Practices: DTOs, Mapper
 	-	[x] Validierung in DTOs
-	-	[ ] LAB: DB für Movie DB erstellen
+	-	[x] LAB: DB für Movie Store erstellen
 
 ```
 dotnet tool install --global dotnet-ef
@@ -55,7 +54,7 @@ dotnet ef database update --project myProject
 	-   [x] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
 	-	[x] VS Extension [EF Core Power Tools](https://marketplace.visualstudio.com/items?itemName=ErikEJ.EFCorePowerTools)
 	-	[x] Controller erzeugen
-	-	[ ] LAB: Daten von Northwind abfragen
+	-	[x] LAB: Daten von Northwind abfragen
 			* Alle Bestellungen
 			* Alle Bestellungen innerhalb eines Zeitraumes (Parameter: StartDate, EndDate)
 			* Bestellungen pro Kunde (Parameter: CustomerID)
@@ -78,7 +77,10 @@ dotnet ef database update --project myProject
 	-	[x] Middleware für Authentication konfigurieren
 	-	[x] IdentityDbContext verwenden
 	-	[x] JwtToken erstellen
-	-	[ ] Authentication mit Microsoft Identity Platform via Entra (ehem. Azure AD)
+
+	-	[x] Authentication mit Microsoft Identity Platform via Entra (ehem. Azure AD)
+	-	[x] [Client Secrets](https://learn.microsoft.com/en-us/aspnet/core/security/app-secrets)
+	-	[x] [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
 
 	
 ## Modul 009 OData
