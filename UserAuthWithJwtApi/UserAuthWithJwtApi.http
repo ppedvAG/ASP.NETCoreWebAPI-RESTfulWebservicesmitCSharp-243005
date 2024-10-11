@@ -1,0 +1,66 @@
+@UserAuthWithJwtApi_HostAddress = https://localhost:43300
+
+POST {{UserAuthWithJwtApi_HostAddress}}/account/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "R. Root",
+  "password": "Syst3m"
+}
+
+###
+
+POST {{UserAuthWithJwtApi_HostAddress}}/account/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "WebApi User 123",
+  "email": "user123@example.com",
+  "password": "Syst3m"
+}
+
+###
+
+// Wir müssen den Token aus dem Login Response als Bearer neu setzen (exp date beachten; nur 7 Tage gueltig)
+GET {{UserAuthWithJwtApi_HostAddress}}/api/vehicles
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvb3RAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoiUi4gUm9vdCIsIm5iZiI6MTcyODY1MzEzMCwiZXhwIjoxNzI5MjU3OTMwLCJpYXQiOjE3Mjg2NTMxMzAsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzMzIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDMzMDAifQ.OU93QSogND9c8gs_SIegz3bj9GnNupt98XEBv_QJ9lQG7V3XYgxNUa8agERjs8GfP5Ank94AwfEMHUwgXqIZTg
+Accept: application/json
+
+###
+
+POST {{UserAuthWithJwtApi_HostAddress}}/api/vehicles
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvb3RAZXhhbXBsZS5jb20iLCJnaXZlbl9uYW1lIjoiUi4gUm9vdCIsIm5iZiI6MTcyODY1MzEzMCwiZXhwIjoxNzI5MjU3OTMwLCJpYXQiOjE3Mjg2NTMxMzAsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzMzIiwiYXVkIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDMzMDAifQ.OU93QSogND9c8gs_SIegz3bj9GnNupt98XEBv_QJ9lQG7V3XYgxNUa8agERjs8GfP5Ank94AwfEMHUwgXqIZTg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "manufacturer": "ppedv",
+  "model": "Authorized model",
+  "fuel": "Diesel",
+  "type": "Pickup",
+  "color": 222,
+  "topSpeed": 222
+}
+
+###
+
+PUT {{UserAuthWithJwtApi_HostAddress}}/api/vehicles/101
+Content-Type: application/json
+Accept: application/json
+
+{
+  "manufacturer": "ppedv",
+  "model": "Paul Panzer IV",
+  "fuel": "Electric",
+  "type": "Convertible",
+  "color": 42
+}
+
+###
+
+GET {{UserAuthWithJwtApi_HostAddress}}/api/vehicles/101
+Accept: application/json
+
+###

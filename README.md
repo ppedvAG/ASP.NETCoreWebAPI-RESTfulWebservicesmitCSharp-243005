@@ -75,10 +75,10 @@ dotnet ef database update --project myProject
 
 ## Modul 008 Authentication
 
-	-	[ ] Middleware für Authentication konfigurieren
-	-	[ ] IdentityDbContext verwenden
-	-	[ ] JwtToken erstellen
-	-	[ ] Authentication mit Microsoft Identity Platform via Azure AD
+	-	[x] Middleware für Authentication konfigurieren
+	-	[x] IdentityDbContext verwenden
+	-	[x] JwtToken erstellen
+	-	[ ] Authentication mit Microsoft Identity Platform via Entra (ehem. Azure AD)
 
 	
 ## Modul 009 OData
