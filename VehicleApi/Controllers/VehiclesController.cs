@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using VehicleApi.Mappers;
 using VehicleApi.Models;
 using VehicleManagement.Contracts;
-using VehicleManagement.Models;
 
 namespace VehicleApi.Controllers
 {
@@ -18,7 +18,7 @@ namespace VehicleApi.Controllers
 
         // GET: api/Vehicles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Auto>>> GetVehicles([FromQuery] SearchParams? search)
+        public async Task<ActionResult<IEnumerable<AutoDto>>> GetVehicles([FromQuery] SearchParams? search)
         {
             if (!string.IsNullOrEmpty(search?.Manufacturer))
             {
@@ -36,12 +36,12 @@ namespace VehicleApi.Controllers
             }
 
             var result = await _vehicleService.GetVehicles();
-            return Ok(result);
+            return Ok(result.Select(x => x.ToDto()));
         }
 
         // GET: api/Vehicles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Auto>> GetAuto(long id)
+        public async Task<ActionResult<AutoDto>> GetAuto(long id)
         {
             var auto = await _vehicleService.GetVehicleById(id);
 
@@ -50,17 +50,18 @@ namespace VehicleApi.Controllers
                 return NotFound();
             }
 
-            return Ok(auto);
+            return Ok(auto.ToDto());
         }
 
         // PUT: api/Vehicles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutAuto(long id, Auto auto)
+        public async Task<IActionResult> PutAuto(long id, AutoDto auto)
         {
-            if (id != auto.Id)
+            // Required Fields und Range validieren
+            if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(ModelState);
             }
 
             if (await _vehicleService.GetVehicleById(id) == null)
@@ -68,18 +69,24 @@ namespace VehicleApi.Controllers
                 return NotFound();
             }
 
-            await _vehicleService.UpdateVehicle(auto);
+            await _vehicleService.UpdateVehicle(auto.ToEntity());
             return NoContent();
         }
 
         // POST: api/Vehicles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Auto>> PostAuto(Auto auto)
+        public async Task<ActionResult<AutoDto>> PostAuto(AutoDto auto)
         {
-            await _vehicleService.AddVehicle(auto);
+            // Required Fields und Range validieren
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return CreatedAtAction("GetAuto", new { id = auto.Id }, auto);
+            var id = await _vehicleService.AddVehicle(auto.ToEntity());
+
+            return CreatedAtAction("GetAuto", new { id }, auto);
         }
 
         // DELETE: api/Vehicles/5

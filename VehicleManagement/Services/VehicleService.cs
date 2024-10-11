@@ -39,10 +39,11 @@ namespace VehicleManagement.Services
             return await _context.Vehicles.FindAsync(id);
         }
 
-        public async Task AddVehicle(Auto vehicle)
+        public async Task<long> AddVehicle(Auto vehicle)
         {
             _context.Vehicles.Add(vehicle);
             await _context.SaveChangesAsync();
+            return vehicle.Id;
         }
 
         public async Task UpdateVehicle(Auto vehicle)

@@ -18,11 +18,20 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 	-	[x] Vehicle Demo Klassen
 	-	[x] Interface als Contract extrahiert
 
-## Modul 004 Routing
+## Modul 004 Routing, MediaTypes, Async/Await
 
 	-	[ ] Movie Database Api
 	-	[x] Controller mit CRUD Operationen
-	-	[x] Model constraints
+
+	-	[x] Route constraints
+	-	[x] [Model Binding](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/)
+
+	-	[x] Content Negotiation
+	-	[x] MediaTypes & [Formatters](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/media-formatters)
+	-	[x] ActionResults als XML zurück geben 
+	-	[x] ActionResults als CSV zurück geben 
+
+	-	[x] Async/Await Pattern
 	-	[ ] LAB: Movie DB erstellen
 
 ## Modul 005 EF Core
@@ -32,6 +41,8 @@ KursRepository zu Kurs ASP.NET Core Web API - RESTful Webservices mit C# der ppe
 	-	[x] DbContext erzeugt
 	-	[x] Connection string erstellt
 	-	[x] Abhängigkeiten via DI registriert
+	-	[x] Best Practices: DTOs, Mapper
+	-	[x] Validierung in DTOs
 	-	[ ] LAB: DB für Movie DB erstellen
 
 ```
@@ -50,10 +61,12 @@ dotnet ef database update --project myProject
 			* Bestellungen pro Kunde (Parameter: CustomerID)
 			* Kunden pro Land (Parameter: Country)
 
-## Modul 006 Media Types
+## Modul 006 Testing
 
-	-	[x] ActionResults als XML zurück geben 
-	-	[x] ActionResults als CSV zurück geben 
+	-	[x] [Überblick Strategien](https://learn.microsoft.com/de-de/ef/core/testing/)
+	-	[x] [Unit Testing Controllers](https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api)
+	-	[x] Moq benutzen um Controller Dependencies zu mocken
+	-	[x] LocalDB benutzen
 
 ## Modul 007 HttpClient
 

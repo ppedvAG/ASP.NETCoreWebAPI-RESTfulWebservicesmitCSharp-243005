@@ -15,7 +15,7 @@ Accept: text/csv
 
 ###
 
-GET {{VehicleApi_HostAddress}}/api/vehicles?manufacturer=Ferrari
+GET {{VehicleApi_HostAddress}}/api/vehicles?manufacturer=ppedv
 Accept: text/csv
 
 ###
@@ -36,10 +36,11 @@ Accept: application/json
 
 {
   "manufacturer": "ppedv",
-  "model": "0815",
-  "fuel": "Electric",
+  "model": "4711",
+  "fuel": "Diesel",
   "type": "Convertible",
-  "color": 42
+  "color": "Yellow",
+  "topSpeed": 222
 }
 
 ###
