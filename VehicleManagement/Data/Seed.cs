@@ -7,6 +7,8 @@ namespace VehicleManagement.Data
 {
     public class Seed
     {
+        public const int VehicleCount = 100;
+
         public static Seed Instance = new();
 
         private readonly Faker _faker = new Faker();
@@ -19,7 +21,7 @@ namespace VehicleManagement.Data
         public void InitData(ModelBuilder modelBuilder)
         {
             // Erzeuge 100 zufaellige Autos
-            var vehicles = Enumerable.Range(1, 100).Select(Generate).ToArray();
+            var vehicles = Enumerable.Range(1, VehicleCount + 1).Select(Generate).ToArray();
 
             // Vehicles in DB schreiben
             modelBuilder.Entity<Auto>().HasData(vehicles);
